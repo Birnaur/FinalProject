@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Offers</title>
+</head>
+<body>
+<h1>Travel Offers</h1>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Destination</th>
+        <th>Price</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+    </tr>
+    <tr th:each="offer : ${travelOffers}">
+        <td th:text="${offer.id}"></td>
+        <td th:text="${offer.destination}"></td>
+        <td th:text="${offer.price}"></td>
+        <td th:text="${offer.startDate}"></td>
+        <td th:text="${offer.endDate}"></td>
+    </tr>
+</table>
+</body>
+</html>
